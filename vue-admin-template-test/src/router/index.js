@@ -38,6 +38,28 @@ export const constantRouterMap = [
   },
 
   {
+    path: '/hospSet',
+    component: Layout,
+    redirect: '/hospSet/list',
+    name: 'Hospital Setup',
+    meta: { title: 'Hospital Setup', icon: 'example' },
+    children: [
+      {
+        path: 'list',
+        name: 'Hospital Setup List',
+        component: () => import('@/views/hospset/list'),
+        meta: { title: 'Hospital Setup List', icon: 'table' }
+      },
+      {
+        path: 'add',
+        name: 'Hospital Setup Add',
+        component: () => import('@/views/hospset/add'),
+        meta: { title: 'Hospital Setup Add', icon: 'tree' }
+      }
+    ]
+  },
+
+  {
     path: '/example',
     component: Layout,
     redirect: '/example/table',
