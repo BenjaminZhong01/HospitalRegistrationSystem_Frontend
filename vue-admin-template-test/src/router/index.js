@@ -48,14 +48,22 @@ export const constantRouterMap = [
         path: 'list',
         name: 'Hospital Setup List',
         component: () => import('@/views/hospset/list'),
-        meta: { title: 'Hospital Setup List', icon: 'table' }
+        meta: { title: 'Hospitals List', icon: 'table' }
       },
       {
         path: 'add',
         name: 'Hospital Setup Add',
         component: () => import('@/views/hospset/add'),
-        meta: { title: 'Hospital Setup Add', icon: 'tree' }
+        meta: { title: 'Add Hospital', icon: 'tree' }
+      },
+      {
+        path: 'edit/:id',
+        name: 'EduTeacherEdit',
+        component: () =>import('@/views/hospset/add'),
+        meta: { title: 'Edit Hospital', noCache: true },
+        hidden: true
       }
+        
     ]
   },
 
